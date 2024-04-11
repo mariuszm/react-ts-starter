@@ -1,0 +1,31 @@
+@use '../abstracts/breakpoints' as *;
+
+@mixin mq($key, $rule: min-width) {
+  $size: map-get($breakpoints, $key);
+
+  @media only screen and ($rule: $size) {
+    @content;
+  }
+}
+
+@mixin pseudo(
+  $loc: before,
+  $content: '',
+  $pos: absolute,
+  $top: initial,
+  $bottom: initial,
+  $left: initial,
+  $right: initial
+) {
+  position: relative;
+
+  &::#{$loc} {
+    content: $content;
+    position: $pos;
+    top: $top;
+    bottom: $bottom;
+    left: $left;
+    right: $right;
+    @content;
+  }
+}

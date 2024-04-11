@@ -1,0 +1,54 @@
+@use '../abstracts/mixins' as *;
+
+.grid {
+  display: grid;
+  grid-template-columns: var(--aside-width) var(--main-width) var(--aside-width);
+  grid-template-rows:
+    6rem 6rem 6rem var(--main-height)
+    6rem 6rem;
+  height: 100%; /* or 100vh to fill the whole viewport */
+  font-size: 1.5rem;
+
+  aside,
+  main {
+    grid-column: 1 / 4;
+  }
+
+  @include mq(small) {
+    grid-template-rows:
+      var(--header-height)
+      var(--nav-height)
+      minmax(var(--main-height), var(--aside-height))
+      var(--footer-height);
+
+    aside,
+    main {
+      grid-column: unset;
+    }
+  }
+}
+
+nav,
+header,
+footer {
+  grid-column: 1 / 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+aside,
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+[data-tag-label] {
+  @include pseudo($content: attr(data-tag-label)) {
+    font-style: italic;
+    font-weight: bold;
+    font-family: 'Courier New';
+    opacity: 0.5;
+  }
+}

@@ -1,0 +1,14 @@
+@use 'base';
+@use 'utilities';
+@use 'layouts';
+
+body {
+  --aside-width: 20%;
+  --main-width: auto;
+
+  --header-height: 6rem;
+  --nav-height: 5rem;
+  --main-height: 5rem;
+  --aside-height: auto;
+  --footer-height: 5rem;
+}
