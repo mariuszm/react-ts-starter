@@ -1,0 +1,21 @@
+nav {
+  gap: 1.5rem;
+
+  a {
+    color: var(--clr-text-default);
+    text-decoration: none;
+    font-size: 2rem;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &.active {
+      color: var(--clr-text-dark);
+      font-weight: bold;
+      text-decoration: underline;
+      pointer-events: none;
+    }
+  }
+}
+

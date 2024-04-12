@@ -45,7 +45,11 @@ main {
 }
 
 [data-tag-label] {
-  @include pseudo($content: attr(data-tag-label)) {
+  @include pseudo(
+    $content: attr(data-tag-label),
+    $top: 10px,
+    $right: 10px,
+  ) {
     font-style: italic;
     font-weight: bold;
     font-family: 'Courier New';

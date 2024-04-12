@@ -37,6 +37,8 @@ module.exports = {
           'error',
           {
             groups: [
+              // Style imports.
+              ['^.+\\.?(css)$'],
               // Packages `react` related packages come first.
               ['^react', '^@?\\w'],
               // Internal packages.
@@ -47,8 +49,6 @@ module.exports = {
               ['^\\.\\.(?!/?$)', '^\\.\\./?$'],
               // Other relative imports. Put same-folder imports and `.` last.
               ['^\\./(?=.*/)(?!/?$)', '^\\.(?!/?$)', '^\\./?$'],
-              // Style imports.
-              ['^.+\\.?(css)$']
             ]
           }
         ]
