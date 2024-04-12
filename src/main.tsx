@@ -4,28 +4,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import About from '@/routes/About';
-import ErrorPage from '@/routes/ErrorPage/ErrorPage';
-import Index from '@/routes/Index';
-import Root from '@/routes/Root';
+import { routesConfig } from '@/routes/_config';
 
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <Root />,
-    errorElement: <ErrorPage />,
-    children: [
-      {
-        index: true,
-        element: <Index />,
-      },
-      {
-        path: 'about',
-        element: <About />,
-      },
-    ],
-  },
-]);
+const router = createBrowserRouter(routesConfig);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>

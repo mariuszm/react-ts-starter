@@ -1,3 +1,3 @@
 export default function About() {
-  return <>This is about page</>;
+  return <div data-testid="about">This is about page</div>;
 }

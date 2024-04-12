@@ -8,7 +8,7 @@ import Navigation from '@/components/grid/navigation/Navigation';
 
 export default function Root() {
   return (
-    <div className="grid">
+    <div className="grid" data-testid="grid">
       <Header />
       <Navigation />
       <Aside variant="left" />
