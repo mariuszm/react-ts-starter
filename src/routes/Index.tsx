@@ -1,5 +1,6 @@
-import { useAppStore } from '@/store';
 import { useEffect } from 'react';
+
+import { useAppStore } from '@/store';
 
 export default function Index() {
   const firstName = useAppStore.use.firstName();
@@ -10,7 +11,7 @@ export default function Index() {
   useEffect(() => {
     if (!firstName) updateFirstName('John');
     if (!lastName) updateLastName('Smith');
-  }, [firstName, lastName]);
+  }, [firstName, lastName, updateFirstName, updateLastName]);
 
   return (
     <div data-testid="home">
