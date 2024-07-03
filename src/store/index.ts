@@ -1,7 +1,5 @@
 import { create } from 'zustand';
 
-import { createSelectors } from './_createSelectors';
-
 type Store = {
   firstName: string | null;
   lastName: string | null;
@@ -18,7 +16,7 @@ const initialState: Store = {
   lastName: null,
 };
 
-const useAppStoreBase = create<Store & Actions>(set => ({
+export const useAppStore = create<Store & Actions>(set => ({
   ...initialState,
   updateFirstName(firstName) {
     set(() => ({ firstName }));
@@ -30,5 +28,3 @@ const useAppStoreBase = create<Store & Actions>(set => ({
     set(initialState);
   },
 }));
-
-export const useAppStore = createSelectors(useAppStoreBase);
