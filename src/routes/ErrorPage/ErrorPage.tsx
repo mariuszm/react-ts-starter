@@ -32,7 +32,7 @@ export default function ErrorPage() {
         Go back to <Link to="/">Home</Link>.
       </p>
       <p>
-        <i>{errorMessage(error)}</i>
+        <i data-testid="error-message">{errorMessage(error)}</i>
       </p>
     </div>
   );
