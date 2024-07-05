@@ -18,13 +18,7 @@ const initialState: Store = {
 
 export const useAppStore = create<Store & Actions>(set => ({
   ...initialState,
-  updateFirstName(firstName) {
-    set(() => ({ firstName }));
-  },
-  updateLastName(lastName) {
-    set(() => ({ lastName }));
-  },
-  reset() {
-    set(initialState);
-  },
+  updateFirstName: firstName => set(() => ({ firstName })),
+  updateLastName: lastName => set(() => ({ lastName })),
+  reset: () => set(() => initialState),
 }));
