@@ -1,7 +1,7 @@
 import { createMemoryRouter, RouterProvider } from 'react-router-dom';
 import { render, screen } from '@testing-library/react';
 
-import { routesConfig } from '../_config';
+import { routesConfig } from '@/routes/_config';
 
 const error = new Error('Test error message');
 vi.mock('react-router-dom', async importOriginal => {
