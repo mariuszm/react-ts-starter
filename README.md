@@ -1,30 +1,56 @@
 # React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Included technologies:
 
-Currently, two official plugins are available:
+- [React v18](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
+- routing: [React Router v6](https://reactrouter.com/) based on object config
+- build environment: [Vite.js](https://vitejs.dev/)
+- state management: [Zustand](https://zustand-demo.pmnd.rs/)
+- styles: [SASS](https://sass-lang.com/) with the [7-1 Pattern](https://sass-guidelin.es/#the-7-1-pattern)
+- unit testing: [Vitest](https://vitest.dev/), [Testing Library](https://testing-library.com/)
+- code quality checked with: [ESLint](https://eslint.org/), [Prettier](https://prettier.io/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Prerequisities:
 
-## Expanding the ESLint configuration
+Before running the app, please make sure you have installed `Node.js`, `pnpm` (should also work for `npm` or `yarn`) on your machine.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Installation:
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```
+pnpm i
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Running app:
+
+```
+pnpm run dev
+```
+
+### Building:
+
+```
+pnpm run build
+pnpm run preview
+```
+
+### Unit testing:
+
+```
+pnpm run test
+
+// browser mode
+pnpm run test:ui
+
+// coverage report
+pnpm run coverage
+```
+
+### Checking code quality:
+
+```
+ // eslint
+ pnpm run lint
+
+ // prettier
+ pnpm run prettier
+```
